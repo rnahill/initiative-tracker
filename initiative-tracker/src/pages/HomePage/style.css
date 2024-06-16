@@ -1,0 +1,17 @@
+#add-creature {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+#add-creature div {
+    margin: 1%;
+}
+
+#add-btn{
+    width: 5%;
+
+}
