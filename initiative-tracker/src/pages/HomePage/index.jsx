@@ -11,6 +11,10 @@ export default function HomePage() {
         setFormDataArray([...formDataArray, newFormData]);
       };
 
+    const deleteFormData = (dataToDelete) => {
+        setFormDataArray(formDataArray.filter((_, index) => index != dataToDelete));
+    }
+
 
     return (
         <div>
@@ -20,7 +24,11 @@ export default function HomePage() {
             {formDataArray
             .sort((a, b) => b.initiative - a.initiative)
             .map((formData, index) => (
-                <CreatureBox key={index} formData={formData} />
+                <CreatureBox 
+                key={index} 
+                formData={formData}
+                onDelete={() => deleteFormData(index)}
+                />
             ))}
 
         </div>
