@@ -1,15 +1,28 @@
 import React from 'react';
 
 const CreatureBox = ({ formData }) => {
-  return (
-    <div>
-      <h2>Form Data:</h2>
-      <p><strong>Name:</strong> {formData.name}</p>
-      <p><strong>Initiative:</strong> {formData.initiative}</p>
-      <p><strong>HP:</strong> {formData.hp}</p>
-      <p><strong>AC:</strong> {formData.ac}</p>
-    </div>
-  );
+    return (
+        <>
+        <section className='d-flex flex-row justify-content-evenly p-3 m-4 border'>
+            <div>
+                <h4>Name:</h4>
+                {formData.name}
+            </div>
+            <div>
+                <h4>Initiative:</h4>
+                {formData.initiative}
+            </div>
+            <div>
+                <h4>HP:</h4>
+                {formData.hp}
+            </div>
+            <div>
+                <h4>AC:</h4>
+                {formData.ac}
+            </div>
+        </section>
+        </>
+    );
 };
 
 export default CreatureBox;
