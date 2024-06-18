@@ -1,29 +1,26 @@
 import "./style.css";
+import React, { useState } from 'react';
+import FormBox from "../../components/FormBox"
+import CreatureBox from '../../components/CreatureBox';
 
 export default function HomePage() {
+
+    const [formDataArray, setFormDataArray] = useState([]);
+
+    const addFormData = (newFormData) => {
+        setFormDataArray([...formDataArray, newFormData]);
+      };
+
+
     return (
         <div>
             <h1>D&D Initative Tracker</h1>
-            <section id="add-creature" className="border">
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Creature Name" aria-label="Creature Name"></input>
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Initiative" aria-label="Initiative"></input>
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="HP" aria-label="HP"></input>
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="AC" aria-label="AC"></input>
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Quantity" aria-label="Quantity"></input>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-dark" id="add-btn">Add</button>
-            </section>
+            <FormBox addFormData={addFormData} />
+
+            {formDataArray.map((formData, index) => (
+            <CreatureBox key={index} formData={formData} />
+            ))}
+
         </div>
     )
 }
