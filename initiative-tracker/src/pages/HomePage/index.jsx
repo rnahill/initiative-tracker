@@ -2,7 +2,6 @@ import "./style.css";
 import React, { useState } from 'react';
 import FormBox from "../../components/FormBox"
 import CreatureBox from '../../components/CreatureBox';
-import "../../assets/fonts/DungeonDepths-owJWV.ttf";
 
 export default function HomePage() {
 

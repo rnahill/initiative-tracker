@@ -3,3 +3,10 @@
     src: local("DungeonDepths-owJWV"),
       url("./assets/fonts/DungeonDepths-owJWV.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "Merriweather";   /*Can be any text*/
+    src: local("Merriweather-regular"),
+      url("./assets/fonts/Merriweather-Regular.ttf") format("truetype");
+  }
+
