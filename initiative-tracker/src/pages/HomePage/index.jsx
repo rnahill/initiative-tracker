@@ -2,6 +2,7 @@ import "./style.css";
 import React, { useState } from 'react';
 import FormBox from "../../components/FormBox"
 import CreatureBox from '../../components/CreatureBox';
+import "../../assets/fonts/DungeonDepths-owJWV.ttf";
 
 export default function HomePage() {
 
@@ -17,8 +18,10 @@ export default function HomePage() {
             <h1>D&D Initative Tracker</h1>
             <FormBox addFormData={addFormData} />
 
-            {formDataArray.map((formData, index) => (
-            <CreatureBox key={index} formData={formData} />
+            {formDataArray
+            .sort((a, b) => b.initiative - a.initiative)
+            .map((formData, index) => (
+                <CreatureBox key={index} formData={formData} />
             ))}
 
         </div>
