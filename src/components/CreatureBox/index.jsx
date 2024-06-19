@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
+import Dropdowns from '../Dropdowns';
 import "./style.css"
 
 const CreatureBox = ({ formData, onDelete }) => {
@@ -25,7 +25,7 @@ const CreatureBox = ({ formData, onDelete }) => {
     return (
         <>
             <div className='border'>
-                <section className='d-flex flex-row justify-content-evenly p-3 m-4 form-box'>
+                <section className='d-flex flex-row justify-content-evenly p-3 m-2 form-box'>
                     <div>
                         <h5>Name:</h5>
                         {formData.name}
@@ -56,63 +56,8 @@ const CreatureBox = ({ formData, onDelete }) => {
                     </div>
                     <button onClick={onDelete}>Delete</button>
                 </section>
-                <section className='d-flex flex-row justify-content-center'>
-                    
-                    {/* Conditions Dropdown */}
-                    <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
-                            Conditions
-                        </Dropdown.Toggle>
-
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-
-
-                    {/* Resistances Dropdown */}
-                    <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
-                            Resistances
-                        </Dropdown.Toggle>
-
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-
-
-                    {/* Immunities Dropdown */}
-                    <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
-                            Immunities
-                        </Dropdown.Toggle>
-
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-
-
-                    {/* Vulnerabilities Dropdown */}
-                    <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
-                            Vulnerabilities
-                        </Dropdown.Toggle>
-
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-                    
+                <section>
+                    <Dropdowns />
                 </section>
             </div>
         </>
