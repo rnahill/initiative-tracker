@@ -24,13 +24,15 @@ const FormBox = ({ addFormData }) => {
 
     return (
         <>
-                <form onSubmit={handleSubmit} className='d-flex justify-content-evenly m-5 p-4 border'>
+                <form onSubmit={handleSubmit} className='d-flex justify-content-evenly m-5 p-4 border d-flex flex-row flex-wrap'>
                     <input
                         type="text"
                         name="name"
                         value={inputValues.name}
                         onChange={handleChange}
                         placeholder='Name'
+                        className='form-input'
+
                     />
 
                     <input
@@ -39,6 +41,7 @@ const FormBox = ({ addFormData }) => {
                         value={inputValues.initiative}
                         onChange={handleChange}
                         placeholder='Initiative'
+                        className='form-input'
                     />
 
                     <input
@@ -47,6 +50,7 @@ const FormBox = ({ addFormData }) => {
                         value={inputValues.hp}
                         onChange={handleChange}
                         placeholder='HP'
+                        className='form-input'
                     />
 
                     <input
@@ -55,9 +59,10 @@ const FormBox = ({ addFormData }) => {
                         value={inputValues.ac}
                         onChange={handleChange}
                         placeholder='AC'
+                        className='form-input'
                     />
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" className='submit-btn'>Submit</button>
                 </form>
         </>
     )
