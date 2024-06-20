@@ -24,8 +24,8 @@ const CreatureBox = ({ formData, onDelete }) => {
 
     return (
         <>
-            <div className='border'>
-                <section className='d-flex flex-row justify-content-evenly p-3 m-2 form-box'>
+            <div className='border creature-box'>
+                <section className='d-flex flex-row justify-content-evenly p-3 m-2 merriweather'>
                     <div>
                         <h5>Name:</h5>
                         {formData.name}

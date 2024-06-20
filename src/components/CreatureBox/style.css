@@ -1,8 +1,16 @@
-.form-box {
+.merriweather {
     font-family: "Merriweather" !important;
 }
 
 .criv {
     font-family: "Merriweather" !important;
     margin-bottom: 1%;
+}
+
+.creature-box {
+    width: 94%;
+    position: relative;
+    left: 3%;
+    background-color: #1c1d21;
+    color: white;
 }
