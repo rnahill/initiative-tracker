@@ -18,7 +18,7 @@ export default function HomePage() {
 
 
     return (
-        <div>
+    <div style={{height: "100vh", width: "85%", background: "white", position:"relative", left:"8%"}}>
             <div className=" d-flex justify-content-end">
                 <button className="howToBtn">
                     <Link to="/HowTo" style={{ textDecoration: 'none', color: 'black' }}>How To Use</Link>
