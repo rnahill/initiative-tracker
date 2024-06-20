@@ -1,5 +1,6 @@
 import Select from "react-dropdown-select";
-import React, { useState } from "react";
+import React, { useState } from "react"; 3
+import "./style.css"
 
 export default function Dropdowns() {
     const [conditions, setConditions] = useState([]);
@@ -40,22 +41,44 @@ export default function Dropdowns() {
 
     return (
         <>
-            <Select 
-                options={options[0].conditions.map((item) => ({ label: item, value: item }))}
-                onChange={handleConditionsChange}
-            />
-            <Select 
-                options={options[1].resistances.map((item) => ({ label: item, value: item }))}
-                onChange={handleResistancesChange}
-            />
-            <Select 
-                options={options[2].immunities.map((item) => ({ label: item, value: item }))}
-                onChange={handleImmunitiesChange}
-            />
-            <Select 
-                options={options[3].vulnerabilities.map((item) => ({ label: item, value: item }))}
-                onChange={handleVulnerabilitiesChange}
-            />
+            <div className="row">
+                <div className="col-3">
+                    <h5 style={{ marginLeft: "10%" }}>Conditions</h5>
+                    <Select
+                        options={options[0].conditions.map((item) => ({ label: item, value: item }))}
+                        onChange={handleConditionsChange}
+                        className="dropdown"
+                        closeOnClickInput="true"
+                        searchable="true"
+                    />
+                    <h5 style={{ marginLeft: "10%" }}>Resistances</h5>
+                    <Select
+                        options={options[1].resistances.map((item) => ({ label: item, value: item }))}
+                        onChange={handleResistancesChange}
+                        className="dropdown"
+                        closeOnClickInput="true"
+                        searchable="true"
+                    />
+                </div>
+                <div className="col-3">
+                    <h5 style={{ marginLeft: "10%" }}>Immunities</h5>
+                    <Select
+                        options={options[2].immunities.map((item) => ({ label: item, value: item }))}
+                        onChange={handleImmunitiesChange}
+                        className="dropdown"
+                        closeOnClickInput="true"
+                        searchable="true"
+                    />
+                    <h5 style={{ marginLeft: "10%" }}>Vulnerabilities</h5>
+                    <Select
+                        options={options[3].vulnerabilities.map((item) => ({ label: item, value: item }))}
+                        onChange={handleVulnerabilitiesChange}
+                        className="dropdown"
+                        closeOnClickInput="true"
+                        searchable="true"
+                    />
+                </div>
+            </div>
         </>
     );
 }
