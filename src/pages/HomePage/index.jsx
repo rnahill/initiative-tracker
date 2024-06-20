@@ -6,6 +6,17 @@ import CreatureBox from '../../components/CreatureBox';
 
 export default function HomePage() {
 
+const style = {
+    height: "100vh", 
+    width: "85%", 
+    backgroundColor: "#8A739A", 
+    position:"relative", 
+    left:"8%"
+
+}
+
+// #6C92DD
+
     const [formDataArray, setFormDataArray] = useState([]);
 
     const addFormData = (newFormData) => {
@@ -18,7 +29,7 @@ export default function HomePage() {
 
 
     return (
-    <div style={{height: "100vh", width: "85%", background: "white", position:"relative", left:"8%"}}>
+    <div style={style}>
             <div className=" d-flex justify-content-end">
                 <button className="howToBtn">
                     <Link to="/HowTo" style={{ textDecoration: 'none', color: 'black' }}>How To Use</Link>
