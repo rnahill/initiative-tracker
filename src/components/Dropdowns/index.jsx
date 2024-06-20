@@ -9,16 +9,16 @@ export default function Dropdowns() {
 
     const options = [
         {
-            conditions: ["blinded", "charmed", "deafened", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"  ]
+            conditions: ["blinded", "charmed", "deafened", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"]
         },
         {
-            resistances: ["acid", "fire"]
+            resistances: ["piercing", "bludgeoning", "slashing", "cold", "fire", "lightning", "thunder", "poison", "acid", "necrotic", "radiant", "force", "psychic"]
         },
         {
-            immunities: ["acid", "fire"]
+            immunities: ["piercing", "bludgeoning", "slashing", "cold", "fire", "lightning", "thunder", "poison", "acid", "necrotic", "radiant", "force", "psychic"]
         },
         {
-            vulnerabilities: ["acid", "fire"]
+            vulnerabilities: ["piercing", "bludgeoning", "slashing", "cold", "fire", "lightning", "thunder", "poison", "acid", "necrotic", "radiant", "force", "psychic"]
         }
     ];
 
