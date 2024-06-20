@@ -52,7 +52,7 @@ export default function Dropdowns() {
                         searchable="true"
                     />
                     <p>Selected Conditions: {conditions.join(', ')}</p>
-                    <h5 style={{ marginLeft: "10%" }}>Resistances</h5>
+                    <h5 style={{ marginLeft: "10%" }}>Damage Resistances</h5>
                     <Select
                         options={options[1].resistances.map((item) => ({ label: item, value: item }))}
                         onChange={handleResistancesChange}
@@ -63,7 +63,7 @@ export default function Dropdowns() {
                     <p>Selected Resistances: {resistances.join(', ')}</p>
                 </div>
                 <div className="col-3">
-                    <h5 style={{ marginLeft: "10%" }}>Immunities</h5>
+                    <h5 style={{ marginLeft: "10%" }}>Damage Immunities</h5>
                     <Select
                         options={options[2].immunities.map((item) => ({ label: item, value: item }))}
                         onChange={handleImmunitiesChange}
@@ -72,7 +72,7 @@ export default function Dropdowns() {
                         searchable="true"
                     />
                      <p>Selected Immunities: {immunities.join(', ')}</p>
-                    <h5 style={{ marginLeft: "10%" }}>Vulnerabilities</h5>
+                    <h5 style={{ marginLeft: "10%" }}>Damage Vulnerabilities</h5>
                     <Select
                         options={options[3].vulnerabilities.map((item) => ({ label: item, value: item }))}
                         onChange={handleVulnerabilitiesChange}
