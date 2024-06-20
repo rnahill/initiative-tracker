@@ -24,19 +24,19 @@ export default function Dropdowns() {
     ];
 
     const handleConditionsChange = (values) => {
-        setConditions(values);
+        setConditions(values.map(v => v.value));
     };
 
     const handleResistancesChange = (values) => {
-        setResistances(values);
+        setResistances(values.map(v => v.value));
     };
 
     const handleImmunitiesChange = (values) => {
-        setImmunities(values);
+        setImmunities(values.map(v => v.value));
     };
 
     const handleVulnerabilitiesChange = (values) => {
-        setVulnerabilities(values);
+        setVulnerabilities(values.map(v => v.value));
     };
 
     return (
@@ -51,6 +51,7 @@ export default function Dropdowns() {
                         closeOnClickInput="true"
                         searchable="true"
                     />
+                    <p>Selected Conditions: {conditions.join(', ')}</p>
                     <h5 style={{ marginLeft: "10%" }}>Resistances</h5>
                     <Select
                         options={options[1].resistances.map((item) => ({ label: item, value: item }))}
@@ -59,6 +60,7 @@ export default function Dropdowns() {
                         closeOnClickInput="true"
                         searchable="true"
                     />
+                    <p>Selected Resistances: {resistances.join(', ')}</p>
                 </div>
                 <div className="col-3">
                     <h5 style={{ marginLeft: "10%" }}>Immunities</h5>
@@ -69,6 +71,7 @@ export default function Dropdowns() {
                         closeOnClickInput="true"
                         searchable="true"
                     />
+                     <p>Selected Immunities: {immunities.join(', ')}</p>
                     <h5 style={{ marginLeft: "10%" }}>Vulnerabilities</h5>
                     <Select
                         options={options[3].vulnerabilities.map((item) => ({ label: item, value: item }))}
@@ -77,6 +80,7 @@ export default function Dropdowns() {
                         closeOnClickInput="true"
                         searchable="true"
                     />
+                    <p>Selected Vulnerabilities: {vulnerabilities.join(', ')}</p>
                 </div>
             </div>
         </>
