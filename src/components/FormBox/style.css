@@ -8,4 +8,7 @@ form {
 
 .submit-btn {
     margin-top: 1%;
+    background-color: #1c1d21 !important;
+    color: white;
+    padding: 10px;
 }

@@ -24,7 +24,7 @@ const FormBox = ({ addFormData }) => {
 
     return (
         <>
-                <form onSubmit={handleSubmit} className='d-flex justify-content-evenly m-5 p-3 border d-flex flex-row flex-wrap'>
+                <form onSubmit={handleSubmit} className='d-flex justify-content-evenly m-5 pb-3 border rounded d-flex flex-row flex-wrap'>
                     <input
                         type="text"
                         name="name"
@@ -62,7 +62,7 @@ const FormBox = ({ addFormData }) => {
                         className='form-input'
                     />
 
-                    <button type="submit" className='submit-btn'>Submit</button>
+                    <button type="submit" className='submit-btn rounded'>Submit</button>
                 </form>
         </>
     )
