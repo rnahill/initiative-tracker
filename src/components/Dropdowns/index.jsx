@@ -81,6 +81,7 @@ export default function Dropdowns() {
                         searchable="true"
                     />
                     <p>Selected Vulnerabilities: {vulnerabilities.join(', ')}</p>
+                    {/* Look at bootstrap close button */}
                 </div>
             </div>
         </>
