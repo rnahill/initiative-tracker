@@ -23,8 +23,17 @@ h1 {
 }
 
 .howToBtn {
-    font-family: "Merriweather";
+    font-family: "Merriweather" !important;
     margin-top: 1%;
     margin-right: 1%;
+    background-color: #1c1d21 !important;
+    color: white;
+    padding: 10px;
     
+}
+
+.offCanvas {
+    background-color: #1c1d21 !important;
+    color: white !important;
+    font-family: "Merriweather" !important;
 }

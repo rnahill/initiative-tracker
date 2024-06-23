@@ -17,11 +17,11 @@ const router = createBrowserRouter([
           index: true,
           element: <HomePage />,
         }
-        ,
-        {
-          path: '/HowTo',
-          element: <HowToPage />,
-        }
+        // ,
+        // {
+        //   path: '/HowTo',
+        //   element: <HowToPage />,
+        // }
       ],
     },
   ]);
