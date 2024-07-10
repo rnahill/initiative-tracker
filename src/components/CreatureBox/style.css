@@ -1,6 +1,5 @@
 .stat-box {
     font-family: "Merriweather" !important;
-    width: 70% !important; 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

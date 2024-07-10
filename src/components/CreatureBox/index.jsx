@@ -24,20 +24,20 @@ const CreatureBox = ({ formData, onDelete }) => {
 
     return (
         <>
-            <div className='border border-dark-subtle rounded creature-box shadow-lg row'>
-                <section className='p-3 m-2 stat-box border border-dark-subtle rounded'>
-                    <div className='mx-5'>
+            <div className='grid border border-gray-600 rounded creature-box'>
+                <section className='border border-gray-600 rounded space-x-20 stat-box'>
+                    <div>
                         <h5>Name:</h5>
                         {formData.name}
                     </div>
-                    <div className='mx-5'>
+                    <div>
                         <h5>Initiative:</h5>
                         {formData.initiative}
                     </div>
-                    <div className='mx-5 hp-box'>
+                    <div className='hp-box'>
                         <h5>HP:</h5>
                         {hp}
-                        <form className='d-flex flex-row'>
+                        <form className='flex flex-row'>
                             <button onClick={subtractHP}>-</button>
                             <input
                                 type='text'
@@ -52,7 +52,7 @@ const CreatureBox = ({ formData, onDelete }) => {
                     <div>
 
                     </div>
-                    <div className='mx-5'>
+                    <div>
                         <h5>AC:</h5>
                         {formData.ac}
                     </div>
