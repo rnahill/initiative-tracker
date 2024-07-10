@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Dropdowns from '../Dropdowns';
+import { Button }from "@material-tailwind/react";
 import "./style.css"
 
 const CreatureBox = ({ formData, onDelete }) => {
@@ -56,8 +57,7 @@ const CreatureBox = ({ formData, onDelete }) => {
                         <h5>AC:</h5>
                         {formData.ac}
                     </div>
-                    <button onClick={onDelete}>Delete</button>
-                    {/* Look at bootstrap close button */}
+                    <Button onClick={onDelete}>Delete</Button>
                 </section>
                 <section>
                     <Dropdowns />

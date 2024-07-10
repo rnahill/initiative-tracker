@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button }from "@material-tailwind/react";
 import "./style.css"
 
 
@@ -62,7 +63,7 @@ const FormBox = ({ addFormData }) => {
                         className='form-input'
                     />
 
-                    <button type="submit" className='submit-btn rounded'>Submit</button>
+                    <Button type="submit" className='submit-btn rounded'>Submit</Button>
                 </form>
         </>
     )
