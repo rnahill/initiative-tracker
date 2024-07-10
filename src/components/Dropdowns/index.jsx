@@ -1,20 +1,28 @@
-import Select from "react-dropdown-select";
 import React, { useState } from "react";
-import { Chip } from "@material-tailwind/react";
+import {
+    Menu,
+    MenuHandler,
+    MenuList,
+    MenuItem,
+    Button,
+    Chip,
+    Checkbox
+} from "@material-tailwind/react";
 import "./style.css"
 
 export default function Dropdowns() {
 
 
     //For dismissable chips
-    const [open, setOpen] = React.useState(true);
+    // const [open, setOpen] = React.useState(true);
 
-    
 
-    const [conditions, setConditions] = useState([]);
-    const [resistances, setResistances] = useState([]);
-    const [immunities, setImmunities] = useState([]);
-    const [vulnerabilities, setVulnerabilities] = useState([]);
+    const [selectedItems, setSelectedItems] = useState([]);
+
+    // const [conditions, setConditions] = useState([]);
+    // const [resistances, setResistances] = useState([]);
+    // const [immunities, setImmunities] = useState([]);
+    // const [vulnerabilities, setVulnerabilities] = useState([]);
 
     const options = [
         {
@@ -31,76 +39,183 @@ export default function Dropdowns() {
         }
     ];
 
-    const handleConditionsChange = (values) => {
-        setConditions(values.map(v => v.value));
-        setOpen(true);
+
+    const conditions = options[0].conditions;
+    const resistances = options[1].resistances;
+    const immunities = options[2].immunities;
+    const vulnerabilities = options[3].vulnerabilities;
+
+    const handleCheckboxChange = (condition) => {
+        setSelectedItems((prev) =>
+            prev.includes(condition)
+                ? prev.filter((item) => item !== condition)
+                : [...prev, condition]
+        );
     };
 
-    const handleResistancesChange = (values) => {
-        setResistances(values.map(v => v.value));
-        setOpen(true);
-    };
+    // const handleConditionsChange = (values) => {
+    //     setConditions(values.map(v => v.value));
+    //     // setOpen(true);
+    // };
 
-    const handleImmunitiesChange = (values) => {
-        setImmunities(values.map(v => v.value));
-        setOpen(true);
-    };
+    // const handleResistancesChange = (values) => {
+    //     setResistances(values.map(v => v.value));
+    //     // setOpen(true);
+    // };
 
-    const handleVulnerabilitiesChange = (values) => {
-        setVulnerabilities(values.map(v => v.value));
-        setOpen(true);
-    };
+    // const handleImmunitiesChange = (values) => {
+    //     setImmunities(values.map(v => v.value));
+    //     // setOpen(true);
+    // };
+
+    // const handleVulnerabilitiesChange = (values) => {
+    //     setVulnerabilities(values.map(v => v.value));
+    //     // setOpen(true);
+    // };
 
     return (
         <>
-            <div className="grid grid-cols-2">
+            <div>
+
+                <section>
+
+                {/* Conditions */}
                 <div>
-                    <h5 style={{ marginLeft: "10%" }}>Conditions</h5>
-                    <Select
-                        options={options[0].conditions.map((item) => ({ label: item, value: item }))}
-                        onChange={handleConditionsChange}
-                        className="dropdown"
-                        closeOnClickInput="true"
-                        searchable="true"
-                    />
-                    <p>Selected Conditions: {conditions.join(', ')}</p>
-                    <h5 style={{ marginLeft: "10%" }}>Damage Resistances</h5>
-                    <Select
-                        options={options[1].resistances.map((item) => ({ label: item, value: item }))}
-                        onChange={handleResistancesChange}
-                        className="dropdown"
-                        closeOnClickInput="true"
-                        searchable="true"
-                    />
-                    <p>Selected Resistances: {resistances.join(', ')}</p>
+                    <Menu
+                        dismiss={{
+                            itemPress: false,
+                        }}
+                    >
+                        <MenuHandler>
+                            <Button>Conditions</Button>
+                        </MenuHandler>
+                        <MenuList>
+                            {conditions.map((condition) => (
+                                <MenuItem key={condition} className="p-0">
+                                    <label
+                                        htmlFor={condition}
+                                        className="flex cursor-pointer items-center gap-2 p-2"
+                                    >
+                                        <Checkbox
+                                            ripple={false}
+                                            id={condition}
+                                            containerProps={{ className: "p-0" }}
+                                            className="hover:before:content-none"
+                                            onChange={() => handleCheckboxChange(condition)}
+                                        />
+                                        {condition}
+                                    </label>
+                                </MenuItem>
+                            ))}
+                        </MenuList>
+                    </Menu>
                 </div>
+
+
+                {/* Resistances */}
                 <div>
-                    <h5 style={{ marginLeft: "10%" }}>Damage Immunities</h5>
-                    <Select
-                        options={options[2].immunities.map((item) => ({ label: item, value: item }))}
-                        onChange={handleImmunitiesChange}
-                        className="dropdown"
-                        closeOnClickInput="true"
-                        searchable="true"
-                    />
-                     {/* <p>Selected Immunities: {immunities.join(', ')}</p> */}
-                     <Chip open={open} value={immunities} onClose={() => setOpen(false)} />
-
-
-                    <h5 style={{ marginLeft: "10%" }}>Damage Vulnerabilities</h5>
-                    <Select
-                        options={options[3].vulnerabilities.map((item) => ({ label: item, value: item }))}
-                        onChange={handleVulnerabilitiesChange}
-                        className="dropdown"
-                        closeOnClickInput="true"
-                        searchable="true"
-                    />
-                    {/* <p>Selected Vulnerabilities: {vulnerabilities.join(', ')}</p> */}
-
-                    <Chip open={open} value={vulnerabilities} onClose={() => setOpen(false)} />
-
-                    
+                    <Menu
+                        dismiss={{
+                            itemPress: false,
+                        }}
+                    >
+                        <MenuHandler>
+                            <Button>Resistances</Button>
+                        </MenuHandler>
+                        <MenuList>
+                            {resistances.map((resistance) => (
+                                <MenuItem key={resistance} className="p-0">
+                                    <label
+                                        htmlFor={resistance}
+                                        className="flex cursor-pointer items-center gap-2 p-2"
+                                    >
+                                        <Checkbox
+                                            ripple={false}
+                                            id={resistance}
+                                            containerProps={{ className: "p-0" }}
+                                            className="hover:before:content-none"
+                                            onChange={() => handleCheckboxChange(condition)}
+                                        />
+                                        {resistance}
+                                    </label>
+                                </MenuItem>
+                            ))}
+                        </MenuList>
+                    </Menu>
                 </div>
+
+
+                {/* Immunities */}
+                <div>
+
+                <Menu
+                        dismiss={{
+                            itemPress: false,
+                        }}
+                    >
+                        <MenuHandler>
+                            <Button>Immunities</Button>
+                        </MenuHandler>
+                        <MenuList>
+                            {immunities.map((immunity) => (
+                                <MenuItem key={immunity} className="p-0">
+                                    <label
+                                        htmlFor={immunity}
+                                        className="flex cursor-pointer items-center gap-2 p-2"
+                                    >
+                                        <Checkbox
+                                            ripple={false}
+                                            id={immunity}
+                                            containerProps={{ className: "p-0" }}
+                                            className="hover:before:content-none"
+                                            onChange={() => handleCheckboxChange(condition)}
+                                        />
+                                        {immunity}
+                                    </label>
+                                </MenuItem>
+                            ))}
+                        </MenuList>
+                    </Menu>
+
+                </div>
+
+                
+                {/* Vulnerabilities */}
+                <div>
+
+                <Menu
+                        dismiss={{
+                            itemPress: false,
+                        }}
+                    >
+                        <MenuHandler>
+                            <Button>Vulnerabilities</Button>
+                        </MenuHandler>
+                        <MenuList>
+                            {vulnerabilities.map((vulnerability) => (
+                                <MenuItem key={vulnerability} className="p-0">
+                                    <label
+                                        htmlFor={vulnerability}
+                                        className="flex cursor-pointer items-center gap-2 p-2"
+                                    >
+                                        <Checkbox
+                                            ripple={false}
+                                            id={vulnerability}
+                                            containerProps={{ className: "p-0" }}
+                                            className="hover:before:content-none"
+                                            onChange={() => handleCheckboxChange(condition)}
+                                        />
+                                        {vulnerability}
+                                    </label>
+                                </MenuItem>
+                            ))}
+                        </MenuList>
+                    </Menu>
+
+                </div>
+
+                </section>
+
             </div>
         </>
     );
