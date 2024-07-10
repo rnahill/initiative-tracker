@@ -1,12 +1,17 @@
 @font-face {
-    font-family: "DungeonDepths";   /*Can be any text*/
-    src: local("DungeonDepths-owJWV"),
-      url("./assets/fonts/DungeonDepths-owJWV.ttf") format("truetype");
-  }
+  font-family: "DungeonDepths";
+  /*Can be any text*/
+  src: local("DungeonDepths-owJWV"),
+    url("./assets/fonts/DungeonDepths-owJWV.ttf") format("truetype");
+}
 
-  @font-face {
-    font-family: "Merriweather";   /*Can be any text*/
-    src: local("Merriweather-regular"),
-      url("./assets/fonts/Merriweather-Regular.ttf") format("truetype");
-  }
+@font-face {
+  font-family: "Merriweather";
+  /*Can be any text*/
+  src: local("Merriweather-regular"),
+    url("./assets/fonts/Merriweather-Regular.ttf") format("truetype");
+}
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

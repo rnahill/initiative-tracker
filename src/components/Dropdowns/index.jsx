@@ -1,8 +1,16 @@
 import Select from "react-dropdown-select";
-import React, { useState } from "react"; 3
+import React, { useState } from "react";
+import { Chip } from "@material-tailwind/react";
 import "./style.css"
 
 export default function Dropdowns() {
+
+
+    //For dismissable chips
+    const [open, setOpen] = React.useState(true);
+
+    
+
     const [conditions, setConditions] = useState([]);
     const [resistances, setResistances] = useState([]);
     const [immunities, setImmunities] = useState([]);
@@ -37,6 +45,7 @@ export default function Dropdowns() {
 
     const handleVulnerabilitiesChange = (values) => {
         setVulnerabilities(values.map(v => v.value));
+        setOpen(true);
     };
 
     return (
@@ -80,7 +89,10 @@ export default function Dropdowns() {
                         closeOnClickInput="true"
                         searchable="true"
                     />
-                    <p>Selected Vulnerabilities: {vulnerabilities.join(', ')}</p>
+                    {/* <p>Selected Vulnerabilities: {vulnerabilities.join(', ')}</p> */}
+
+                    <Chip open={open} value={vulnerabilities} onClose={() => setOpen(false)} />
+
                     {/* Look at bootstrap close button */}
                 </div>
             </div>

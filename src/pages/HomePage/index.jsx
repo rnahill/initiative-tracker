@@ -1,8 +1,6 @@
 import "./style.css";
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link, useLocation } from 'react-router-dom';
 import FormBox from "../../components/FormBox"
 import CreatureBox from '../../components/CreatureBox';
 
