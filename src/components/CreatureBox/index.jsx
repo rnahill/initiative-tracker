@@ -24,33 +24,35 @@ const CreatureBox = ({ formData, onDelete }) => {
 
     return (
         <>
-            <div className='border rounded creature-box'>
-                <section className='d-flex flex-row justify-content-evenly p-3 m-2 merriweather'>
-                    <div>
+            <div className='border border-dark-subtle rounded creature-box shadow-lg row'>
+                <section className='p-3 m-2 stat-box border border-dark-subtle rounded'>
+                    <div className='mx-5'>
                         <h5>Name:</h5>
                         {formData.name}
                     </div>
-                    <div>
+                    <div className='mx-5'>
                         <h5>Initiative:</h5>
                         {formData.initiative}
                     </div>
-                    <div>
+                    <div className='mx-5 hp-box'>
                         <h5>HP:</h5>
                         {hp}
-                        <form>
+                        <form className='d-flex flex-row'>
                             <button onClick={subtractHP}>-</button>
                             <input
                                 type='text'
                                 name="changeHp"
                                 value={inputValue}
-                                onChange={(e) => setInputValue(e.target.value)} />
+                                onChange={(e) => setInputValue(e.target.value)}
+                                id="add-sub-input"
+                                 />
                             <button onClick={addHP}>+</button>
                         </form>
                     </div>
                     <div>
 
                     </div>
-                    <div>
+                    <div className='mx-5'>
                         <h5>AC:</h5>
                         {formData.ac}
                     </div>

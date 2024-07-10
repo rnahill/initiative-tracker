@@ -1,11 +1,13 @@
-.merriweather {
+.stat-box {
     font-family: "Merriweather" !important;
+    width: 70% !important; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.criv {
-    font-family: "Merriweather" !important;
-    margin-bottom: 1%;
-}
+
 
 .creature-box {
     width: 94%;
@@ -13,4 +15,15 @@
     left: 3%;
     background-color: #1c1d21;
     color: white;
+    display: flex;
+    justify-content: center;
 }
+
+#add-sub-input {
+    width: 100%;
+}
+
+.hp-box {
+    width: 9%;
+}
+
