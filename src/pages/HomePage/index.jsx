@@ -39,7 +39,7 @@ export default function HomePage() {
 
     return (
         <div style={style}>
-            <div className=" d-flex justify-content-end">
+            <div className="flex justify-end">
                 {/* <button className="howToBtn">
                     <Link to="/HowTo" style={{ textDecoration: 'none', color: 'black' }}>How To Use</Link>
                 </button> */}
@@ -47,7 +47,7 @@ export default function HomePage() {
                     How To Use
                 </button>
 
-                <Offcanvas show={show} onHide={handleClose} placement="end" className="off-canvas">
+                {/* <Offcanvas show={show} onHide={handleClose} placement="end" className="off-canvas">
                     <Offcanvas.Header closeButton>
                         <Offcanvas.Title>How To Use</Offcanvas.Title>
                     </Offcanvas.Header>
@@ -60,7 +60,7 @@ export default function HomePage() {
                             <li class="list-group-item">And a fifth one</li>
                         </ul>
                     </Offcanvas.Body>
-                </Offcanvas>
+                </Offcanvas> */}
             </div>
             <h1>D&D Initative Tracker</h1>
             <FormBox addFormData={addFormData} />

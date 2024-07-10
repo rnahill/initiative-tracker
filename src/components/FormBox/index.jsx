@@ -24,7 +24,7 @@ const FormBox = ({ addFormData }) => {
 
     return (
         <>
-                <form onSubmit={handleSubmit} className='d-flex justify-content-evenly m-5 pb-3 border border-dark shadow rounded d-flex flex-row flex-wrap'>
+                <form onSubmit={handleSubmit} className='flex justify-evenly flex-row flex-wrap m-5 pb-3 border border-gray-800 rounded'>
                     <input
                         type="text"
                         name="name"

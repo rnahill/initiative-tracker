@@ -5,7 +5,7 @@ import App from './App.jsx';
 import HomePage from "./pages/HomePage"
 import HowToPage from "./pages/HowToPage"
 import './index.css'
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const router = createBrowserRouter([
     {
