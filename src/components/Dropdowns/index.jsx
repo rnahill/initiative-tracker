@@ -77,7 +77,7 @@ export default function Dropdowns() {
         <>
             <div>
 
-                <section>
+                <section className="flex flex-row space-x-7 my-3">
 
                 {/* Conditions */}
                 <div>
@@ -89,7 +89,7 @@ export default function Dropdowns() {
                         <MenuHandler>
                             <Button>Conditions</Button>
                         </MenuHandler>
-                        <MenuList>
+                        <MenuList  className="max-h-72">
                             {conditions.map((condition) => (
                                 <MenuItem key={condition} className="p-0">
                                     <label
@@ -122,7 +122,7 @@ export default function Dropdowns() {
                         <MenuHandler>
                             <Button>Resistances</Button>
                         </MenuHandler>
-                        <MenuList>
+                        <MenuList className="max-h-72">
                             {resistances.map((resistance) => (
                                 <MenuItem key={resistance} className="p-0">
                                     <label
@@ -156,7 +156,7 @@ export default function Dropdowns() {
                         <MenuHandler>
                             <Button>Immunities</Button>
                         </MenuHandler>
-                        <MenuList>
+                        <MenuList className="max-h-72">
                             {immunities.map((immunity) => (
                                 <MenuItem key={immunity} className="p-0">
                                     <label
@@ -179,7 +179,7 @@ export default function Dropdowns() {
 
                 </div>
 
-                
+
                 {/* Vulnerabilities */}
                 <div>
 
@@ -191,7 +191,7 @@ export default function Dropdowns() {
                         <MenuHandler>
                             <Button>Vulnerabilities</Button>
                         </MenuHandler>
-                        <MenuList>
+                        <MenuList className="max-h-72">
                             {vulnerabilities.map((vulnerability) => (
                                 <MenuItem key={vulnerability} className="p-0">
                                     <label
