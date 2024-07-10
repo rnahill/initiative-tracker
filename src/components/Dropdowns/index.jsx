@@ -33,14 +33,17 @@ export default function Dropdowns() {
 
     const handleConditionsChange = (values) => {
         setConditions(values.map(v => v.value));
+        setOpen(true);
     };
 
     const handleResistancesChange = (values) => {
         setResistances(values.map(v => v.value));
+        setOpen(true);
     };
 
     const handleImmunitiesChange = (values) => {
         setImmunities(values.map(v => v.value));
+        setOpen(true);
     };
 
     const handleVulnerabilitiesChange = (values) => {
@@ -80,7 +83,10 @@ export default function Dropdowns() {
                         closeOnClickInput="true"
                         searchable="true"
                     />
-                     <p>Selected Immunities: {immunities.join(', ')}</p>
+                     {/* <p>Selected Immunities: {immunities.join(', ')}</p> */}
+                     <Chip open={open} value={immunities} onClose={() => setOpen(false)} />
+
+
                     <h5 style={{ marginLeft: "10%" }}>Damage Vulnerabilities</h5>
                     <Select
                         options={options[3].vulnerabilities.map((item) => ({ label: item, value: item }))}
@@ -93,7 +99,7 @@ export default function Dropdowns() {
 
                     <Chip open={open} value={vulnerabilities} onClose={() => setOpen(false)} />
 
-                    {/* Look at bootstrap close button */}
+                    
                 </div>
             </div>
         </>

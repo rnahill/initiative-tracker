@@ -57,6 +57,7 @@ const CreatureBox = ({ formData, onDelete }) => {
                         {formData.ac}
                     </div>
                     <button onClick={onDelete}>Delete</button>
+                    {/* Look at bootstrap close button */}
                 </section>
                 <section>
                     <Dropdowns />
