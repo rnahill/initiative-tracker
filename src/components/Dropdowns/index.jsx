@@ -53,8 +53,8 @@ export default function Dropdowns() {
 
     return (
         <>
-            <div className="row">
-                <div className="col-3">
+            <div className="grid grid-cols-2">
+                <div>
                     <h5 style={{ marginLeft: "10%" }}>Conditions</h5>
                     <Select
                         options={options[0].conditions.map((item) => ({ label: item, value: item }))}
@@ -74,7 +74,7 @@ export default function Dropdowns() {
                     />
                     <p>Selected Resistances: {resistances.join(', ')}</p>
                 </div>
-                <div className="col-3">
+                <div>
                     <h5 style={{ marginLeft: "10%" }}>Damage Immunities</h5>
                     <Select
                         options={options[2].immunities.map((item) => ({ label: item, value: item }))}

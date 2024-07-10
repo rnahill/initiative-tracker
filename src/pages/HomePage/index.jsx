@@ -1,6 +1,11 @@
 import "./style.css";
 import React, { useState } from 'react';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import {
+    Drawer,
+    Button,
+    Typography,
+    IconButton,
+} from "@material-tailwind/react";
 import FormBox from "../../components/FormBox"
 import CreatureBox from '../../components/CreatureBox';
 
@@ -16,6 +21,12 @@ export default function HomePage() {
 
     }
 
+    // For how-to drawer
+    const [open, setOpen] = React.useState(false);
+
+    const openDrawer = () => setOpen(true);
+    const closeDrawer = () => setOpen(false);
+
 
     // To add and delete form data
     const [formDataArray, setFormDataArray] = useState([]);
@@ -29,12 +40,6 @@ export default function HomePage() {
     }
 
 
-    // To handle the offcanvas
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
 
 
     return (
@@ -43,24 +48,40 @@ export default function HomePage() {
                 {/* <button className="howToBtn">
                     <Link to="/HowTo" style={{ textDecoration: 'none', color: 'black' }}>How To Use</Link>
                 </button> */}
-                <button className="how-to-btn rounded" onClick={handleShow}>
-                    How To Use
-                </button>
 
-                {/* <Offcanvas show={show} onHide={handleClose} placement="end" className="off-canvas">
-                    <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>How To Use</Offcanvas.Title>
-                    </Offcanvas.Header>
-                    <Offcanvas.Body>
-                        <ul class="list-group list-group-numbered off-canvas">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                            <li class="list-group-item">A fourth item</li>
-                            <li class="list-group-item">And a fifth one</li>
-                        </ul>
-                    </Offcanvas.Body>
-                </Offcanvas> */}
+                <React.Fragment>
+                    <Button onClick={openDrawer} className="how-to-btn rounded">How To Use</Button>
+                    <Drawer open={open} onClose={closeDrawer} className="p-4">
+                        <div className="mb-6 flex items-center justify-between">
+                            <Typography variant="h5" color="blue-gray">
+                                How To Use
+                            </Typography>
+                            <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={2}
+                                    stroke="currentColor"
+                                    className="h-5 w-5"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </IconButton>
+                        </div>
+                        <Typography color="gray" className="mb-8 pr-4 font-normal">
+                            Material Tailwind features multiple React and HTML components, all
+                            written with Tailwind CSS classes and Material Design guidelines.
+                        </Typography>
+                    </Drawer>
+                </React.Fragment>
+
+
+
             </div>
             <h1>D&D Initative Tracker</h1>
             <FormBox addFormData={addFormData} />

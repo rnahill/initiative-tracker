@@ -19,13 +19,13 @@
 h1 {
     font-family: "DungeonDepths";
     text-align: center;
-    padding-top: 3%;
+    padding-top: 1%;
 }
 
 .how-to-btn {
     font-family: "Merriweather" !important;
-    margin-top: 1%;
-    margin-right: 1%;
+    margin-top: 2%;
+    margin-right: 2%;
     background-color: #1c1d21 !important;
     color: white;
     padding: 10px;
