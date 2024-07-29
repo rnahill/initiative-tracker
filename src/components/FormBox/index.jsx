@@ -63,7 +63,7 @@ const FormBox = ({ addFormData }) => {
                         className='form-input'
                     />
 
-                    <Button type="submit" className='submit-btn rounded'>Submit</Button>
+                    <Button type="submit" className='submit-btn rounded'>Create</Button>
                 </form>
         </>
     )

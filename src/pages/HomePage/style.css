@@ -24,7 +24,6 @@ h1 {
 }
 
 .how-to-btn {
-    font-family: "Merriweather" !important;
     margin-top: 2%;
     margin-right: 2%;
     background-color: #1c1d21 !important;
@@ -33,10 +32,11 @@ h1 {
     
 }
 
-.off-canvas {
+.drawer {
     background-color: #1c1d21 !important;
-    color: white !important;
-    font-family: "Merriweather" !important;
+    color: #b39ddb !important
 }
+
+
 
 

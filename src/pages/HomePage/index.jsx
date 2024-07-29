@@ -51,9 +51,9 @@ export default function HomePage() {
 
                 <React.Fragment>
                     <Button onClick={openDrawer} className="how-to-btn rounded">How To Use</Button>
-                    <Drawer open={open} onClose={closeDrawer} className="p-4">
+                    <Drawer open={open} onClose={closeDrawer} className="p-4 drawer">
                         <div className="mb-6 flex items-center justify-between">
-                            <Typography variant="h5" color="blue-gray">
+                            <Typography variant="h5" color="indigo-50">
                                 How To Use
                             </Typography>
                             <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
@@ -73,7 +73,7 @@ export default function HomePage() {
                                 </svg>
                             </IconButton>
                         </div>
-                        <Typography color="gray" className="mb-8 pr-4 font-normal">
+                        <Typography  className="mb-8 pr-4 font-normal">
                             Material Tailwind features multiple React and HTML components, all
                             written with Tailwind CSS classes and Material Design guidelines.
                         </Typography>
