@@ -28,17 +28,16 @@ const CreatureBox = ({ formData, onDelete }) => {
             <div className='grid border border-gray-600 rounded creature-box'>
                 <section className='border border-gray-600 rounded space-x-20 stat-box'>
                     <div>
-                        <h5>Name:</h5>
-                        {formData.name}
+                        <p>{formData.name}</p>
                     </div>
                     <div>
-                        <h5>Initiative:</h5>
-                        {formData.initiative}
+                        <h5 className='pb-2'>Initiative: {formData.initiative}</h5>
+                        
                     </div>
                     <div className='hp-box'>
-                        <h5>HP:</h5>
+                        <h5 className='pb-2'>HP:</h5>
                         {hp}
-                        <form className='flex flex-row'>
+                        <form className='flex flex-row change-hp'>
                             <button onClick={subtractHP}>-</button>
                             <input
                                 type='text'
@@ -54,7 +53,7 @@ const CreatureBox = ({ formData, onDelete }) => {
 
                     </div>
                     <div>
-                        <h5>AC:</h5>
+                        <h5 className='pb-2'>AC:</h5>
                         {formData.ac}
                     </div>
                     <Button onClick={onDelete}>Delete</Button>

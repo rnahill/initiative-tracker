@@ -4,6 +4,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 2%
 }
 
 
@@ -12,7 +13,7 @@
     width: 80%;
     position: relative;
     left: 10%;
-    padding: 1%;
+    padding: 2%;
     background-color: #1c1d21;
     color: white;
     display: flex;
@@ -27,3 +28,6 @@
     width: 9%;
 }
 
+.change-hp {
+
+}
