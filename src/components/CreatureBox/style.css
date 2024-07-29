@@ -22,12 +22,18 @@
 
 #add-sub-input {
     width: 100%;
+    padding: 5%;
 }
 
 .hp-box {
-    width: 9%;
+    width: 15%;
+    font-size: x-large;
 }
 
-.change-hp {
-
+.name {
+    font-size: xx-large;
 }
+ .italic {
+    font-style: italic;
+    color: grey;
+ }

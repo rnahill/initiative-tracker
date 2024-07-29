@@ -28,33 +28,34 @@ const CreatureBox = ({ formData, onDelete }) => {
             <div className='grid border border-gray-600 rounded creature-box'>
                 <section className='border border-gray-600 rounded space-x-20 stat-box'>
                     <div>
-                        <p>{formData.name}</p>
-                    </div>
-                    <div>
-                        <h5 className='pb-2'>Initiative: {formData.initiative}</h5>
+                        <p className='name'>{formData.name}</p>
+                        <h5 className='pb-2 italic'>Initiative: {formData.initiative}</h5>
+                        <h5 className='pb-2 italic'>{formData.ac} AC </h5>
                         
                     </div>
-                    <div className='hp-box'>
-                        <h5 className='pb-2'>HP:</h5>
-                        {hp}
-                        <form className='flex flex-row change-hp'>
-                            <button onClick={subtractHP}>-</button>
+                    <div>
+                         
+                    </div>
+                    <div className='hp-box border border-gray-600 rounded p-2'>
+                        <p className='pb-2'>{hp} HP</p>
+                        <form className='flex flex-row'>
+                            <button className="mr-2" onClick={subtractHP}>-</button>
                             <input
                                 type='text'
                                 name="changeHp"
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
+                                placeholder='HP'
                                 id="add-sub-input"
                                  />
-                            <button onClick={addHP}>+</button>
+                            <button className='ml-2' onClick={addHP}>+</button>
                         </form>
                     </div>
                     <div>
 
                     </div>
                     <div>
-                        <h5 className='pb-2'>AC:</h5>
-                        {formData.ac}
+                        
                     </div>
                     <Button onClick={onDelete}>Delete</Button>
                 </section>
