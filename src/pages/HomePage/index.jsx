@@ -74,8 +74,38 @@ export default function HomePage() {
                             </IconButton>
                         </div>
                         <Typography  className="mb-8 pr-4 font-normal">
-                            Material Tailwind features multiple React and HTML components, all
-                            written with Tailwind CSS classes and Material Design guidelines.
+                            <li>
+                            Enter the name of the creature into the first form.
+                            </li>
+                            <br />
+                            <li>
+                            Enter the initiative of the creature into the second form.
+                            </li>
+                            <br />
+                            <li>
+                            Optionally, enter the HP of the creature into the third form.
+                            </li>
+                            <br />
+                            <li>
+                            Optionally, enter the AC of the creature into the fourth form.
+                            </li>
+                            <br />
+                            <li>
+                            Click the "CREATE" button.
+                            </li>
+                            <br />
+                            <li>
+                            The tracker will automatically organize the creatures in order by initiative.
+                            </li>
+                            <br />
+                            <li>
+                            After you have created a creature, choose any conditions, resistances, immunities, or vulnerabilities that the creature may have.
+                            </li>
+                            <br />
+                            <li>
+                            Add or subtract HP as needed.
+                            </li>
+                            <br />
                         </Typography>
                     </Drawer>
                 </React.Fragment>
